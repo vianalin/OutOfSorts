@@ -25,6 +25,7 @@ public class Sorts{
 
 	//}
 
+	//lab part 1: bubble sort
 	public static void bubbleSort(int[] data){
   		int dataholder = 0;
   		boolean again = true;
@@ -38,6 +39,23 @@ public class Sorts{
   		}
   		if(!again) {
   		bubbleSort(data);
+  		}
+  	}
+
+  	//lab part 2: selection sort
+  	public static void selectionsort(int[] data) {
+  		for(int i = 0; i < data.length - 1; i++) {
+  			int min = data[i];
+  			int index = i;
+  			for(int j; j < data.length - 1; j++) {
+  				if(data[j] < min) {
+  					min = data[j];
+  					index = j;
+  				}
+  			}
+  			int holder = data[i];
+  			data[i] = min; //swapping min to data[i] index
+  			data[index] = holder; //swapping the larger value back
   		}
   	}
 }
