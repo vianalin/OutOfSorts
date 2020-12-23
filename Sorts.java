@@ -62,14 +62,13 @@ public class Sorts{
   			for(int j = i - 1; j >= 0; j--) {
   				if(j == 0 && data[j] > holder) {
   					data[j+1] = data[j];
-  					data[j] = holder;
   					break;
   				}
-  				if(data[j] < holder) {
-  					data[j+1] = holder;
+  				if(data[j] > holder) {
+  					data[j+1] = data[j];
   					break;
   				}
-  				data[j+1] = data[j];
+  				data[j+1] = holder;
   			}
   		}
   	}
