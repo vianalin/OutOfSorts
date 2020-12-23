@@ -54,4 +54,23 @@ public class Sorts{
   			data[index] = holder; //swapping the larger value back
   		}
   	}
+
+  	//lab part 3: insertion sort
+  	public static void insertionSort(int[] data) {
+  		for(int i = 1; i < data.length; i++) {
+  			int holder = data[i];
+  			for(int j = i - 1; j >= 0; j--) {
+  				if(j == 0 && data[j] > holder) {
+  					data[j+1] = data[j];
+  					data[j] = holder;
+  					break;
+  				}
+  				if(data[j] < holder) {
+  					data[j+1] = holder;
+  					break;
+  				}
+  				data[j+1] = data[j];
+  			}
+  		}
+  	}
 }
