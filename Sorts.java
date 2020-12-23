@@ -43,15 +43,11 @@ public class Sorts{
   	}
 
   	//lab part 2: selection sort
-  	public static void selectionsort(int[] data) {
+  	public static void selectionSort(int[] data) {
   		for(int i = 0; i < data.length - 1; i++) {
   			int min = data[i];
   			int index = i;
-  			for(int j; j < data.length - 1; j++) {
-  				if(data[j] < min) {
-  					min = data[j];
-  					index = j;
-  				}
+  			for(int j = i; j < data.length; j++) {
   			}
   			int holder = data[i];
   			data[i] = min; //swapping min to data[i] index
